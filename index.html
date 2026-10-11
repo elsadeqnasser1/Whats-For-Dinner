@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="fontawesome-free-7.3.1-web/css/all.min.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>What's For Dinner</title>
+  </head>
+  <body>
+    <nav class="navbar bg-white border-bottom shadow-sm">
+      <div class="container navbar-container">
+        <a href="#" class="navbar-brand d-flex align-items-center gap-3">
+          <div class="logo-icon"><i class="fa-solid fa-utensils"></i></div>
+          <div>
+            <h5 class="mb-0 fw-bold text-dark">What's For Dinner</h5>
+            <small class="text-secondary">Your daily meal inspiration</small>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <div class="navbar-actions">
+            <button class="action-item">
+              <i class="fa-solid fa-bookmark"></i>
+              <span>Saved Recipes</span>
+            </button>
+
+            <button class="action-item">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <span>Recent</span>
+            </button>
+
+            <button class="action-item">
+              <i class="fa-solid fa-gear"></i>
+              <span>Settings</span>
+            </button>
+
+            <button class="action-item profile-item">
+              <img src="images/avatar-4.jpg" alt="Profile" />
+              <span>Profile</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="recipe-app">
+      <div class="container-fluid">
+        <div class="recipe-card">
+          <section class="recipe-image">
+            <img src="" alt="" id="img" />
+
+            <div class="recipe-rating">
+              <i class="fa-solid fa-star"></i>
+              <span id="star"></span>
+              <span id="reviews"></span>
+            </div>
+
+            <div class="recipe-info">
+              <div class="row text-center">
+                <div class="col-4">
+                  <span class="d-flex justify-content-center">
+                    <i class="fa-solid fa-clock"></i>
+                  </span>
+                  <span>Prep Time</span>
+                  <strong id="prepTime"></strong>
+                </div>
+
+                <div class="col-4">
+                  <span class="d-flex justify-content-center">
+                    <i class="fa-solid fa-fire-burner"></i>
+                  </span>
+                  <span>Cook Time</span>
+                  <strong id="cookTime"></strong>
+                </div>
+
+                <div class="col-4">
+                  <span class="d-flex justify-content-center">
+                    <i class="fa-solid fa-users"></i>
+                  </span>
+                  <span>Servings</span>
+                  <strong id="people"></strong>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="recipe-details">
+            <div class="recipe-header">
+              <div class="recipe-title">
+                <div class="recipe-badges">
+                  <span id="span1"></span>
+                  <span id="span2"></span>
+                </div>
+
+                <h1 id="mealName"></h1>
+
+                <p id="mealDes"></p>
+              </div>
+
+              <div class="recipe-actions">
+                <button type="button">
+                  <i class="fa-solid fa-bookmark"></i>
+                </button>
+
+                <button type="button">
+                  <i class="fa-solid fa-share-nodes"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="warning d-flex mt-4 px-3 py-3 rounded-3">
+              <div class="icon-warnings mt-2 me-3 fs-4" id="icon-warning"></div>
+              <div class="icon-text">
+                <h5 class="fs-6 fw-bold" id="warning-h5"></h5>
+                <p class="m-0" id="warning-p"></p>
+              </div>
+            </div>
+
+            <div class="recipe-tabs">
+              <button class="tab active tab1" type="button" data-tab="ingredients">
+                <i class="fa-solid fa-list-check"></i>
+                <span>Ingredients</span>
+              </button>
+
+              <button class="tab tab2" type="button" data-tab="instructions">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Instructions</span>
+              </button>
+
+              <button class="tab tab3" type="button" data-tab="nutrition">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Nutrition</span>
+              </button>
+
+              <button class="tab tab4" type="button" data-tab="tips">
+                <i class="fa-solid fa-lightbulb"></i>
+                <span>Chef's Tips</span>
+              </button>
+            </div>
+
+            <div class="tab-content recipe-content bg-white">
+              <!-- Ingredients -->
+              <div class="tab-pane show active p-4 rounded-4" id="ingredients">
+                <ul class="ingredients-list">
+                  <li id="ingredient1">
+                    <span class="ingredient-number">1</span
+                    ><span class="ingredient-text"></span>
+                  </li>
+                  <li id="ingredient2">
+                    <span class="ingredient-number">2</span
+                    ><span class="ingredient-text"></span>
+                  </li>
+                  <li id="ingredient3">
+                    <span class="ingredient-number">3</span
+                    ><span class="ingredient-text"></span>
+                  </li>
+                  <li id="ingredient4">
+                    <span class="ingredient-number">4</span
+                    ><span class="ingredient-text"></span>
+                  </li>
+                  <li id="ingredient5">
+                    <span class="ingredient-number">5</span
+                    ><span class="ingredient-text"></span>
+                  </li>
+                  <li id="ingredient6">
+                    <span class="ingredient-number">6</span
+                    ><span class="ingredient-text"></span>
+                  </li>
+                  <li id="ingredient7">
+                    <span class="ingredient-number">7</span
+                    ><span class="ingredient-text"></span>
+                  </li>
+                  <li id="ingredient8">
+                    <span class="ingredient-number">8</span
+                    ><span class="ingredient-text"></span>
+                  </li>
+                  <li id="ingredient9">
+                    <span class="ingredient-number">9</span
+                    ><span class="ingredient-text"></span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Instructions -->
+              <div class="tab-pane bg-white" id="instructions">
+                <div class="instruction-item">
+                  <span id="instructionNumber1">1</span>
+                  <p id="instruction1"></p>
+                </div>
+
+                <div class="instruction-item">
+                  <span id="instructionNumber2">2</span>
+                  <p id="instruction2"></p>
+                </div>
+
+                <div class="instruction-item">
+                  <span id="instructionNumber3">3</span>
+                  <p id="instruction3"></p>
+                </div>
+
+                <div class="instruction-item">
+                  <span id="instructionNumber4">4</span>
+                  <p id="instruction4"></p>
+                </div>
+
+                <div class="instruction-item">
+                  <span id="instructionNumber5">5</span>
+                  <p id="instruction5"></p>
+                </div>
+
+                <div class="instruction-item">
+                  <span id="instructionNumber6">6</span>
+                  <p id="instruction6"></p>
+                </div>
+              </div>
+
+              <!-- Nutrition -->
+              <div class="tab-pane" id="nutrition">
+                <div class="nutrition-grid">
+                  <div class="nutrition-item">
+                    <div class="nutrition-icon calories">
+                      <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <span id="caloriesTitle">Calories</span>
+                    <strong id="caloriesValue"></strong>
+                  </div>
+
+                  <div class="nutrition-item">
+                    <div class="nutrition-icon protein">
+                      <i class="fa-solid fa-dumbbell"></i>
+                    </div>
+                    <span id="proteinTitle">Protein</span>
+                    <strong id="proteinValue"></strong>
+                  </div>
+
+                  <div class="nutrition-item">
+                    <div class="nutrition-icon carbs">
+                      <i class="fa-solid fa-wheat-awn"></i>
+                    </div>
+                    <span id="carbsTitle">Carbohydrates</span>
+                    <strong id="carbsValue"></strong>
+                  </div>
+
+                  <div class="nutrition-item">
+                    <div class="nutrition-icon fat">
+                      <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <span id="fatTitle">Fat</span>
+                    <strong id="fatValue"></strong>
+                  </div>
+
+                  <div class="nutrition-item">
+                    <div class="nutrition-icon fiber">
+                      <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <span id="fiberTitle">Fiber</span>
+                    <strong id="fiberValue"></strong>
+                  </div>
+
+                  <div class="nutrition-item">
+                    <div class="nutrition-icon sodium">
+                      <i class="fa-solid fa-cube"></i>
+                    </div>
+                    <span id="sodiumTitle">Sodium</span>
+                    <strong id="sodiumValue"></strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Chef's Tips -->
+              <div class="tab-pane bg-white" id="tips">
+                <div class="tip-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span id="tip1"> </span>
+                </div>
+
+                <div class="tip-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span id="tip2"> </span>
+                </div>
+
+                <div class="tip-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span id="tip3"> </span>
+                </div>
+
+                <div class="tip-item">
+                  <i class="fa-solid fa-check"></i>
+                  <span id="tip4"> </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="recipe-footer">
+              <button class="random-recipe" type="button" id="btn-try">
+                <i class="fa-solid fa-rotate"></i>
+                Try Another Recipe
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+  </body>
+</html>
